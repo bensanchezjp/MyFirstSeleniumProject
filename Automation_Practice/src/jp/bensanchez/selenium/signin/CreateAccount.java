@@ -10,33 +10,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateAccount {
-
+	
+	
 	WebDriver driver;
 
-	public void invokeBrowser() {
-
-		try {
-			System.setProperty("webdriver.chrome.driver",
-					"/Users/eljami/Documents/selenium-java-3/chromedriver/chromedriver");
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-			populateForm();
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		}
-	}
-
 	// Populates the Create An Account Form
-	public void populateForm() {
+	public void populateForm(WebDriver driver) {
 		try {
 			driver.navigate().to("http://www.automationpractice.com");
 			driver.findElement(By.className("login")).click();
 
-			driver.findElement(By.cssSelector("#email_create")).sendKeys("abc@de1f.hij");
+			driver.findElement(By.cssSelector("#email_create")).sendKeys("a1b40@de1f.hij");
 
 			driver.findElement(By.cssSelector("#email_create")).sendKeys(Keys.TAB);
 
@@ -98,6 +82,11 @@ public class CreateAccount {
 			driver.findElement(By.id("phone_mobile")).sendKeys("987-654-3210");
 
 			driver.findElement(By.id("submitAccount")).click();
+			
+			AddProducts myDress = new AddProducts();
+			myDress.AddDress(driver);
+			
+			
 
 		} catch (Exception e) {
 
@@ -120,10 +109,11 @@ public class CreateAccount {
 	}
 
 	public static void main(String[] args) {
-		CreateAccount myObj = new CreateAccount();
-		myObj.invokeBrowser();
-		myObj.closeBrowser();
-
-	}
-
+		//CreateAccount myObj = new CreateAccount();
+		InvokeBrowser invokeB = new InvokeBrowser();
+		invokeB.invokeBrowser();
+	
+		
+	
 }
+	}
