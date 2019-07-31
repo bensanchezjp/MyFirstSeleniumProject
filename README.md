@@ -6,13 +6,13 @@ to create a customer account.
 
 1.	Go to http://www.automationpractice.com
 2.	Click “Sign in” Link
-3.	Enter abc@abcd.xyz to create an account
+3.	Enter an email address to create an account
 4.	Press Create an Account button
 5.	Populate Personal Information using data below
     Title: MR
     First Name:  Selenium
     Last Name: Automator
-    Password: abc@de1f.hij
+    Email: [Enter email address from ssstep 3]
     Date of Birth: January 20th 1985
     Sign Up For News Letter:  Yes
     Receive Special Offers from our partners:   Yes
